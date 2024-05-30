@@ -11,3 +11,9 @@ Upon completion of this project, we will have created:
     Write SQL queries to create relationships among tables
     Identify indexes and create them in a database
     Write queries to extract important information from a database 
+
+## Objective 
+
+This project evaluates my understanding of SQL syntax, query construction, and data retrieval techniques by simulating a scenario.
+
+These scenarios serve as a practical demonstration of my SQL skills, showcasing my ability to write SQL queries to create tables, write SQL queries to create relationships among tables, identify indexes and create them in a database, and write queries to extract important information from a database . It showcases my competence in utilizing SQL as a versatile tool for querying and analyzing data, enabling me to extract valuable insights and draw informed conclusions.
