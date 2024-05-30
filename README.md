@@ -17,3 +17,9 @@ Upon completion of this project, we will have created:
 This project evaluates my understanding of SQL syntax, query construction, and data retrieval techniques by simulating a scenario.
 
 These scenarios serve as a practical demonstration of my SQL skills, showcasing my ability to write SQL queries to create tables, write SQL queries to create relationships among tables, identify indexes and create them in a database, and write queries to extract important information from a database . It showcases my competence in utilizing SQL as a versatile tool for querying and analyzing data, enabling me to extract valuable insights and draw informed conclusions.
+
+## Prompt
+We will build a database for a public library. This database is aimed to collect and analyze information about the clients' reading interests. The project concentrates only on books and the clients' interests in books. The analyses that will result from this project will be used by the library's management to decide on the future purchasing policy. 
+
+A. Write the SQL statements in order to create the tables for the database. Use the Entity Relationship Diagram (ERD) of the database shown in Figure 1. For simplicity, we are assuming in this project that a book cannot be written by more than one author. You need to create the tables as well as the required constraints, including the keys (primary and foreign), and the relationships between tables. 
+[ERD for library database](https://github.com/JosephBrides/erd-library/blob/main/sqlA..jpg)
