@@ -5,3 +5,9 @@
 The purpose of these scenarios are to assess my proficiency in using SQL by building a simple database and query it to extract information from it. I will create tables and relationships among them, in addition to the necessary keys and indexes. Then, the next step will be to populate the database with suitable data. When my database is ready, I will write SQL queries to retrieve information. 
 
 Note: This assignment was created with MySQL in mind. Therefore, dates, numbers, etc. have been set up with that tool in mind. 
+Upon completion of this project, we will have created:
+
+    Write SQL queries to create tables
+    Write SQL queries to create relationships among tables
+    Identify indexes and create them in a database
+    Write queries to extract important information from a database 
