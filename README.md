@@ -65,37 +65,37 @@ C. Write the following queries to retrieve the information detailed below. As yo
 
 First, we will write the SQL statements creating tables for the database using the ERD diagram portrayed in the prompt. This will include the required primary and foreign key restraints and relationships between tables. It wll look like this:
 
-CREATE TABLE Author (
-    AuthorID INT PRIMARY KEY,
-    AuthorFirstName VARCHAR(255),
-    AuthorLastName VARCHAR(255),
-    AuthorNationality VARCHAR(255)
-);
+    CREATE TABLE Author (
+        AuthorID INT PRIMARY KEY,
+        AuthorFirstName VARCHAR(255),
+        AuthorLastName VARCHAR(255),
+        AuthorNationality VARCHAR(255)
+    );
 
-CREATE TABLE Book (
-    BookID INT PRIMARY KEY,
-    BookTitle VARCHAR(255),
-    Genre VARCHAR(255),
-    AuthorID INT,
-    FOREIGN KEY (AuthorID) REFERENCES Author(AuthorID)
-);
+    CREATE TABLE Book (
+        BookID INT PRIMARY KEY,
+        BookTitle VARCHAR(255),
+        Genre VARCHAR(255),
+        AuthorID INT,
+        FOREIGN KEY (AuthorID) REFERENCES Author(AuthorID)
+    );
 
-CREATE TABLE Client (
-    ClientID INT PRIMARY KEY,
-    ClientFirstName VARCHAR(255),
-    ClientLastName VARCHAR(255),
-    ClientDOB YEAR,
-    Occupation VARCHAR(255)
-);
+    CREATE TABLE Client (
+        ClientID INT PRIMARY KEY,
+        ClientFirstName VARCHAR(255),
+        ClientLastName VARCHAR(255),
+        ClientDOB YEAR,
+        Occupation VARCHAR(255)
+    );
 
-CREATE TABLE Borrower (
-   BorrowID INT PRIMARY KEY,
-   ClientID INT,
-   BookID INT,
-   BorrowDate DATE,
-   FOREIGN KEY (ClientID) REFERENCES Client(ClientID),
-   FOREIGN KEY (BookID) REFERENCES Book(BookID)
-);
+    CREATE TABLE Borrower (
+       BorrowID INT PRIMARY KEY,
+       ClientID INT,
+       BookID INT,
+       BorrowDate DATE,
+       FOREIGN KEY (ClientID) REFERENCES Client(ClientID),
+       FOREIGN KEY (BookID) REFERENCES Book(BookID)
+    );
 
 
 
