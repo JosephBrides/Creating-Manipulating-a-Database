@@ -100,7 +100,7 @@ First, I will write the SQL statements creating tables for the database using th
 
 ## Part B: Populate
 
-Here I will continue populating the database with the data given in the tables. Here are the results for each table.
+Here I will continue populating the database with the data given in the tables. Here are my results for each table.
 
 Author Table: 
         
