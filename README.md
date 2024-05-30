@@ -48,3 +48,7 @@ C. Write the following queries to retrieve the information detailed below. As yo
 
 ![Author Table](https://github.com/JosephBrides/Creating-Manipulating-a-Database/assets/40529647/13bb3458-4b5a-45b1-9ae5-5f790f987160)
 
+## Book Table:
+
+![Book Table](https://github.com/JosephBrides/Creating-Manipulating-a-Database/assets/40529647/be17592d-c4b5-4b45-8a64-27efef3e20b9)
+
