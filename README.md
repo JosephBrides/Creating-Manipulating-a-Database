@@ -102,7 +102,8 @@ First, I will write the SQL statements creating tables for the database using th
 
 Here I will continue populating the database with the data given in the tables. Here are the results for each table.
 
-        Author Table: 
+Author Table: 
+        
         
         INSERT INTO Author (AuthorID, AuthorFirstName, AuthorLastName, AuthorNationality)
         VALUES 
