@@ -44,3 +44,5 @@ C. Write the following queries to retrieve the information detailed below. As yo
     The oldest and the youngest clients of the library
     First and last names of authors that wrote books in more than one genre 
 
+## Author Table: ![Author Table](https://github.com/JosephBrides/Creating-Manipulating-a-Database/assets/40529647/13bb3458-4b5a-45b1-9ae5-5f790f987160)
+
