@@ -27,7 +27,7 @@ A. Write the SQL statements in order to create the tables for the database. Use 
 
 B. Populate your database with the sample set of data given to you in the tables below the assignment prompts.
 
-C. Write the following queries to retrieve the information detailed below.
+C. Write the following queries to retrieve the information detailed below. As you work on these queries, create indexes that will increase your queries' performance.
 
     Display all contents of the Clients table
     First names, last names, ages and occupations of all clients
@@ -44,4 +44,3 @@ C. Write the following queries to retrieve the information detailed below.
     The oldest and the youngest clients of the library
     First and last names of authors that wrote books in more than one genre 
 
-As you work on these queries, create indexes that will increase your queries' performance. 
