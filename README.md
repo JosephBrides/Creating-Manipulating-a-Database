@@ -7,10 +7,10 @@ The purpose of these scenarios are to assess my proficiency in using SQL by buil
 Note: This assignment was created with MySQL in mind. Therefore, dates, numbers, etc. have been set up with that tool in mind. 
 Upon completion of this project, we will have created:
 
-    Write SQL queries to create tables
-    Write SQL queries to create relationships among tables
-    Identify indexes and create them in a database
-    Write queries to extract important information from a database 
+    -Write SQL queries to create tables
+    -Write SQL queries to create relationships among tables
+    -Identify indexes and create them in a database
+    -Write queries to extract important information from a database 
 
 ## Objective 
 
