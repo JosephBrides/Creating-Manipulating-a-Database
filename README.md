@@ -22,4 +22,4 @@ These scenarios serve as a practical demonstration of my SQL skills, showcasing 
 We will build a database for a public library. This database is aimed to collect and analyze information about the clients' reading interests. The project concentrates only on books and the clients' interests in books. The analyses that will result from this project will be used by the library's management to decide on the future purchasing policy. 
 
 A. Write the SQL statements in order to create the tables for the database. Use the Entity Relationship Diagram (ERD) of the database shown in Figure 1. For simplicity, we are assuming in this project that a book cannot be written by more than one author. You need to create the tables as well as the required constraints, including the keys (primary and foreign), and the relationships between tables. 
-(![sqlA](https://github.com/JosephBrides/Creating-Manipulating-a-Database/assets/40529647/cece2ef8-d80b-4a65-9f96-86aebabcc24b)
+![sqlA](https://github.com/JosephBrides/Creating-Manipulating-a-Database/assets/40529647/cece2ef8-d80b-4a65-9f96-86aebabcc24b)
