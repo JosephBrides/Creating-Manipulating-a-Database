@@ -56,6 +56,12 @@ C. Write the following queries to retrieve the information detailed below. As yo
 
 ![Client Table](https://github.com/JosephBrides/Creating-Manipulating-a-Database/assets/40529647/5640fde9-c554-454f-8e94-c01ba7f07010)
 
+## Borrower table 
+
+![Borrower table](https://github.com/JosephBrides/Creating-Manipulating-a-Database/assets/40529647/0a937184-df11-4fdc-8873-beba642b4a0d)
+
+
+
 
 
 
