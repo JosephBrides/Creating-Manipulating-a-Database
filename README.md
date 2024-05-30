@@ -52,3 +52,10 @@ C. Write the following queries to retrieve the information detailed below. As yo
 
 ![Book Table](https://github.com/JosephBrides/Creating-Manipulating-a-Database/assets/40529647/be17592d-c4b5-4b45-8a64-27efef3e20b9)
 
+## Client table:
+
+![Client Table](https://github.com/JosephBrides/Creating-Manipulating-a-Database/assets/40529647/5640fde9-c554-454f-8e94-c01ba7f07010)
+
+
+
+
