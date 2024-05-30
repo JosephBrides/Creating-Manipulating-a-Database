@@ -63,7 +63,7 @@ C. Write the following queries to retrieve the information detailed below. As yo
 
 ## Part A: Creating tables
 
-First, we will write the SQL statements creating tables for the database using the ERD diagram portrayed in the prompt. This will include the required primary and foreign key restraints and relationships between tables. It wll look like this:
+First, I will write the SQL statements creating tables for the database using the ERD diagram portrayed in the prompt. This will include the required primary and foreign key restraints and relationships between tables. It wll look like this:
 
     CREATE TABLE Author (
         AuthorID INT PRIMARY KEY,
@@ -96,6 +96,134 @@ First, we will write the SQL statements creating tables for the database using t
        FOREIGN KEY (ClientID) REFERENCES Client(ClientID),
        FOREIGN KEY (BookID) REFERENCES Book(BookID)
     );
+
+
+## Part B: Populate
+
+Here I will continue populating the database with the data given in the tables.
+
+## Part C: Writing Queries
+
+Next, I will write the specific queries to get the information they are asking for.
+
+        -- 1. Display all contents of the Clients table
+        SELECT * FROM Client;
+
+        -- 2. First names, last names, ages and occupations of all clients
+        SELECT 
+            ClientFirstName, 
+            ClientLastName, 
+            YEAR(CURDATE()) - CAST(ClientDOB AS UNSIGNED) AS Age, 
+            Occupation 
+        FROM 
+            Client;
+
+        -- 3. First and last names of clients that borrowed books in March 2018
+        SELECT ClientFirstName, ClientLastName
+        FROM Client
+        JOIN Borrower ON Client.ClientID = Borrower.ClientID
+        WHERE MONTH(BorrowDate) = 3 AND YEAR(BorrowDate) = 2018;
+
+        -- 4. First and last names of the top 5 authors clients borrowed in 2017
+        SELECT AuthorFirstName, AuthorLastName
+        FROM Author
+        JOIN Book ON Author.AuthorID = Book.AuthorID
+        JOIN Borrower ON Book.BookID = Borrower.BookID
+        WHERE YEAR(BorrowDate) = 2017
+        GROUP BY Author.AuthorID
+        ORDER BY COUNT(*) DESC
+        LIMIT 5;
+
+        -- 5. Nationalities of the least 5 authors that clients borrowed during years 2015–2017
+        SELECT AuthorNationality
+        FROM Author
+        JOIN Book ON Author.AuthorID = Book.AuthorID
+        JOIN Borrower ON Book.BookID = Borrower.BookID
+        WHERE YEAR(BorrowDate) BETWEEN 2015 AND 2017
+        GROUP BY Author.AuthorID
+        ORDER BY COUNT(*) ASC
+        LIMIT 5;
+
+        -- 6. The book that was most borrowed during years 2015–2017
+        SELECT BookTitle
+        FROM Book
+        JOIN Borrower ON Book.BookID = Borrower.BookID
+        WHERE YEAR(BorrowDate) BETWEEN 2015 AND 2017
+        GROUP BY Book.BookID
+        ORDER BY COUNT(*) DESC
+        LIMIT 1;
+
+        -- 7. Top borrowed genres for client born in years 1970–1980
+        SELECT Genre
+        FROM Book
+        JOIN Borrower ON Book.BookID = Borrower.BookID
+        JOIN Client ON Borrower.ClientID = Client.ClientID
+        WHERE YEAR(ClientDOB) BETWEEN 1970 AND 1980
+        GROUP BY Genre
+        ORDER BY COUNT(*) DESC
+        LIMIT 1;
+
+        -- 8. Top 5 occupations that borrowed most in 2016
+        SELECT Occupation
+        FROM Client
+        JOIN Borrower ON Client.ClientID = Borrower.ClientID
+        WHERE YEAR(BorrowDate) = 2016
+        GROUP BY Occupation
+        ORDER BY COUNT(*) DESC
+        LIMIT 5;
+
+        -- 9. Average number of borrowed books by job title
+        SELECT Occupation, AVG(NumBorrowed) as AvgBorrowed
+        FROM (
+            SELECT Occupation, COUNT(*) as NumBorrowed
+            FROM Client
+            JOIN Borrower ON Client.ClientID = Borrower.ClientID
+            GROUP BY Client.ClientID
+        ) as T
+        GROUP BY Occupation;
+
+        -- 10. Create a VIEW and display titles were borrow by at least %20 percent client
+        CREATE VIEW PopularBooks AS
+        SELECT BookTitle
+        FROM Book
+        JOIN Borrower ON Book.BookID = Borrower.BookID
+        GROUP BY Book.BookID
+        HAVING COUNT(DISTINCT ClientID) >= 0.2 * (SELECT COUNT(*) FROM Client);
+        SELECT * FROM PopularBooks;
+
+        -- 11. The top month borrows in year
+        SELECT MONTH(BorrowDate) as Month, COUNT(*) as NumBorrowed
+        FROM Borrower
+        GROUP BY Month
+        ORDER BY NumBorrowed DESC
+        LIMIT 1;
+
+        -- 12. Average number borrows by age
+        SELECT YEAR(CURDATE()) - YEAR(ClientDOB) AS Age, AVG(NumBorrowed) as AvgBorrowed
+        FROM (
+            SELECT ClientDOB, COUNT(*) as NumBorrowed
+            FROM Client
+            JOIN Borrower ON Client.ClientID = Borrower.ClientID
+            GROUP BY Client.ClientID
+        ) as T
+        GROUP BY Age;
+
+        -- 13. The oldest youngest client library
+        SELECT ClientFirstName, ClientLastName, ClientDOB
+        FROM Client
+        ORDER BY ClientDOB
+        LIMIT 1;
+        SELECT ClientFirstName, ClientLastName, ClientDOB
+        FROM Client
+        ORDER BY ClientDOB DESC
+        LIMIT 1;
+
+        -- 14. First last name author wrote book more than one genre
+        SELECT AuthorFirstName, AuthorLastName
+        FROM Author
+        JOIN Book ON Author.AuthorID = Book.AuthorID
+        GROUP BY Author.AuthorID
+        HAVING COUNT(DISTINCT Genre) > 1;
 
 
 
