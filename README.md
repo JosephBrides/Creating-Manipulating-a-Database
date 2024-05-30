@@ -26,6 +26,7 @@ A. Write the SQL statements in order to create the tables for the database. Use 
 ![sqlA](https://github.com/JosephBrides/Creating-Manipulating-a-Database/assets/40529647/cece2ef8-d80b-4a65-9f96-86aebabcc24b)
 
 B. Populate your database with the sample set of data given to you in the tables below the assignment prompts.
+
 C. Write the following queries to retrieve the information detailed below.
 
     Display all contents of the Clients table
